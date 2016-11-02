@@ -1,0 +1,181 @@
+<div class="container" ng-controller="FrontController">
+  <nav class="navbar navbar-static-top navbar-nomargin">
+    <div class="container nav-container">
+      <div class="navbar-header" style="padding-top:10px;">
+        <a class="navbar-brand" href="">
+            <img class="logoCranner" src="../images/resources/logo2.png"/>
+        </a>
+      </div>
+      <ul class="nav navbar-nav navbar-nav-custom" style="float:right">
+        <li class="font-nav-bar"><a style="color:#000000;text-decoration:none;" href="" ng-click="gotoAbout()">NOSOTROS</a></li>
+        <li class="font-nav-bar"><a style="color:#000000;text-decoration:none;" href="" ng-click="gotoProyectos()">PROYECTOS</a></li>
+        <li class="font-nav-bar"><a style="color:#000000;text-decoration:none;" href="" ng-click="gotoContacto()">CONTACTO</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="row">
+    <div class="col-sm-12" style="padding: 0px !important;">
+      <div id="slides_control">
+        <uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides" no-pause>
+          <uib-slide ng-repeat="banner in banners track by $index" index="$index">
+            <img class="img-responsive" ng-src="../uploads/banners/{{banner.imagen}}" style="margin:auto;"/>
+          </uib-slide>
+        </uib-carousel>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div id="about">
+          <div class="aboutLeft">
+              <img ng-src="images/resources/about.png" style="width:115px"/>
+          </div>
+          <div class="aboutRight font-paragraph">
+              <div class="insideAboutRight">
+                <img ng-src="images/resources/logo2.png" class="logoAbout"/>
+                <p><b>Sobre Nosotros</b><br />Nos especializamos en desarrollar souvenirs a medida. Surgimos como respuesta a los que buscan una propuesta novedosa con la cual poder distinguirse en su evento.</p>
+                <p><b>Por qué elegirnos?</b><br/>
+                   Creamos productos únicos y de gran impacto.<br />
+                   Ofrecemos el mejor resultado para el presupuesto de cada cliente.<br />
+                 </p>
+                 <p>
+                    <b>Equipo</b><br />
+                    <table class="tLinkedin font-linkedin">
+                      <thead></thead>
+                      <tbody>
+                        <tr>
+                          <td style="padding-bottom:20px;padding-top:5px;">
+                            <a href ng-click="openLinkedinDiego()">
+                              <div class="aboutDisenio" ng-init="bgDisenio = '../images/resources/disenio.png'" ng-mouseenter="bgDisenio = '../images/resources/disenio_hover.png'" ng-mouseleave="bgDisenio = '../images/resources/disenio.png'" style="background-image: url({{bgDisenio}}); width:111px; height:120px;">
+
+                              </div>
+                            </a>
+                          </td>
+                          <td style="padding-bottom:20px;padding-top:5px;">
+                            <a href ng-click="openLinkedinFran()">
+                              <div class="aboutVentas" ng-init="bgVentas = '../images/resources/ventas.png'" ng-mouseenter="bgVentas = '../images/resources/ventas_hover.png'" ng-mouseleave="bgVentas = '../images/resources/ventas.png'" style="background-image: url({{bgVentas}}); width:111px; height:120px;">
+
+                              </div>
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <label style="font-size:16pt;font-weight:bold;">Diego Vidili</label>
+                          </td>
+                          <td>
+                            <b><label style="font-size:16pt;font-weight:bold;">Francisco Chiesa</label></b>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <label style="font-size:14pt;">Diseño</label>
+                          </td>
+                          <td>
+                            <label style="font-size:14pt;">Ventas</label>
+                          </td>
+                        </tr>
+                      </table>
+                 </p>
+               </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div id="sProyectos">
+          <div class="proyectosLeft">
+              <img ng-src="images/resources/idea.png" style="width:122px;"/>
+          </div>
+          <div class="proyectosRight font-paragraph">
+                <label class="font-title">Proyectos</label>
+                <p>
+                  Cada uno de nuestros proyectos de souvenirs está pensado y diseñado, según el evento que se conmemora y las características del homenajeado, eso los hace <span style="font-weight:bold">únicos y especiales.</span>
+                </p>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row" style="background-color:#000000;">
+    <div id="proyectosPortadas">
+      <div id="portada{{proyecto._id}}" name="{{proyecto._id}}" class="proyectoImage" ng-repeat="proyecto in proyectos" ng-mouseover="efectoIn(proyecto._id)" ng-mouseleave="efectoOut(proyecto._id)">
+        <a id="{{proyecto._id}}" style="text-decoration:none" href="" ng-click="openProyect(proyecto._id)">
+          <img ng-src='uploads/portadas/{{proyecto.foto_portada}}' style="width:436px !importantm; height:415px !important; max-width: 436px !important; max-height: 415px !important;"/>
+        </a>
+        <span id="span{{proyecto._id}}" class="proyectoImageHover" ng-click="openProyect(proyecto._id)" style="opacity:0">
+          <label class="nombreProyectos">{{proyecto.nombre}}</label>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div id="contacto">
+          <div class="contactoLeft">
+              <img src="../images/resources/contacto.png" style="width:123px;"/>
+          </div>
+          <div class="contactoRight font-paragraph">
+              <p>
+                <label class="font-title">Contacto</label>
+              </p>
+              <p class="font-mail">
+                <a href="https://mail.google.com/mail/u/2/#inbox?compose=new" target="_blank">
+                  info@cranner.com.ar
+                </a>
+              </p>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<nav class="navbar navbar-static-bottom navbar-nomargin">
+  <div class="container nav-container-orange">
+    <div class="navbar-header">
+      <a class="navbar-brand brand-footer" href="">
+        <img src="../images/resources/logo_footer.png"/>
+      </a>
+    </div>
+    <ul class="nav navbar-nav navbar-nav-custom-orange navbar-cranner-footer">
+      <li class="font-nav-bar"><a style="color:#000000;text-decoration:none;" href="" ng-click="gotoAbout()">NOSOTROS</a></li>
+      <li class="font-nav-bar"><a style="color:#000000;text-decoration:none;" href="" ng-click="gotoProyectos()">PROYECTOS</a></li>
+      <li class="font-nav-bar"><a style="color:#000000;text-decoration:none;" href="" ng-click="gotoContacto()">CONTACTO</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- MODAL -->
+
+<script type="text/ng-template" id="detalleProyectoModal">
+  <div class="modal-dialog proyecto-modal">
+    <div class="modal-header detalleProyectoModalHeader">
+      <button type="button" class="close detalleProyectoModalCloseButton" data-dismiss="modal" aria-label="Close" ng-click="close()"><span aria-hidden="true">&times;</span></button>
+    </div>
+    <div id="detalleProyectoModalBody" style="float:left;width:100%;">
+      <div class="descripcionProyecto">
+        <div class="descripcionProyectoLeft">
+        </div>
+        <div class="descripcionProyectoRight font-paragraph">
+          <label class="font-title detalleProyectoModalTitle">{{detProyecto.nombre}}</label>
+          <p>{{detProyecto.descripcion}}</p>
+        </div>
+      </div>
+      <div class="descripcionProyectoImagenes" ng-repeat="grupo in gruposImagenes">
+        <div ng-repeat="imagen in grupo.imagenes">
+          <img ng-if="grupo.tipoGrupo==1" ng-src="uploads/{{imagen.filename}}" style="max-width: 900px !important"/>
+          <img ng-if="grupo.tipoGrupo==2" ng-src="uploads/{{imagen.filename}}" style="max-width: 449px !important; max-height: 299px !important; max-height: 596px !important; float:left"/>
+          <img ng-if="grupo.tipoGrupo==3 && imagen.principal==1" ng-src="uploads/{{imagen.filename}}" style="max-width: 449px !important; max-height: 596px !important; float:left"/>
+          <img ng-if="grupo.tipoGrupo==3 && imagen.principal==0" ng-src="uploads/{{imagen.filename}}" style="max-width: 449px !important; max-height: 298px !important; float:left"/>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /.modal-dialog -->
+</script>
+<!-- FIN MODAL -->

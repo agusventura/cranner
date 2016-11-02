@@ -1,0 +1,57 @@
+<div ng-controller="AltaPortadaController">
+	<div class="col-md-12">
+		<div class="jumbotron jumbotron-angosto">
+			<h2>
+				<span style="float:left;">Alta Banner</span>
+				<button style="float:right;font-size:40px;opacity:1" type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="cancelar()"><span aria-hidden="true">&times;</span></button>
+
+			</h2>
+		</div>
+	</div>
+
+<form class="form-horizontal" role="form" name="altaBannerForm">
+  <div class="row">
+		<div class="col-md-12">
+			<div class="col-md-2" style="text-align:right;padding-right:25px;">
+				<div class="form-group">
+					<label class="control-label" for="descripcionPortada">Banner&nbsp;:</label>
+				</div>
+			</div>
+			<div class="col-md-10">
+				<div class="form-group">
+					<input class="form-control" type="file" file-model="bannerFile" name="bannerFile" id="bannerFile" ng-model="proyecto.foto_portada" accept="image/*" required/>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="col-md-2" style="text-align:right;padding-right:25px;">
+				<div class="form-group">
+				</div>
+			</div>
+			<div class="col-md-10">
+				<div class="form-group">
+					<span style="font-size:12px;float:left">(1308px x 526px)</span>
+					<span style="color:#FF0000;float:right"><b>{{bannerFileError}}</b></span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<div class="col-md-2">
+			</div>
+			<div class="col-md-10">
+				<div class="form-group">
+					<button class="btn btn-crannerGuardar" ng-click="crearPortada(portada)">Guardar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</form>
+</div>
+
+<div id="spinner">
+</div>

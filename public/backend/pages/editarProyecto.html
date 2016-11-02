@@ -1,0 +1,344 @@
+	<div ng-controller="EditController">
+		<!--
+		<h1>{{message}}</h1>
+		<h2>Editar de Proyectos ID {{idProyecto}}</h2>
+		<h3>Proyecto: {{proyecto}} </h3>
+		<h4>Descripcion: {{proyecto.descripcion}} </h4>
+	-->
+		<div class="row">
+			<div class="col-md-12">
+				<div class="jumbotron jumbotron-angosto">
+					<h2>
+						<span style="float:left"> Edición de Proyecto - {{proyecto.nombre}}</span>
+						<button style="float:right;font-size:40px;opacity:1" type="button" class="close" data-dismiss="modal" aria-label="Volver" ng-click="volver()"><span aria-hidden="true">&times;</span></button>
+						</h2>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<form class="form-horizontal" role="form" name="editForm" ng-submit="editProject(proyecto)">
+					<div class="form-group">
+						<label class="control-label col-md-2" for="nombreProyecto">Nombre:</label>
+						<div class="col-md-8">
+							<input type="text" class="form-control" ng-model="proyecto.nombre" name="nombreProyecto" id="nombreProyecto" required>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-sm-2"></div>
+						<div class="col-md-6">
+							<span style="color:#FF0000"><b>{{nombreMessageError}}</b></span>
+						</div>
+					</div>
+
+
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="descripcionProyecto">Descripción:</label>
+						<div class="col-md-8">
+							<textarea class="form-control" ng-model="proyecto.descripcion" id="descripcionProyecto" name="descripcionProyecto" rows="6" style="resize:none;"></textarea>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="portadaFile">Portada&nbsp;:</label>
+						<div class="col-md-6">
+							<input class="form-control" type="file" file-model="portadaFile" name="portadaFile" id="portadaFile" ng-model="proyecto.foto_portada" accept="image/*" required/>
+						</div>
+						<!--
+							<div class="col-md-2">
+								<button class="btn btn-warning" ng-click="uploadPortada()">Subir</button>
+							</div>
+						-->
+					</div>
+					<div class="form-group">
+						<div class="col-sm-2"></div>
+						<div class="col-md-6">
+							<span style="font-size:12px;">(436px x 416px)</span>
+							<span style="color:#FF0000; float:right;"><b>{{portadaMessageError}}</b></span>
+						</div>
+					</div>
+
+
+					<div class="form-group">
+						<label class="control-label col-sm-2">Portada Actual:</label>
+						<div class="col-md-6">
+							<div style="width:70px; display:inline;">
+								<img  class="img-rounded" width="70" ng-src="../../uploads/portadas/{{proyecto.foto_portada}}"/>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2"></label>
+						<div class="col-md-8">
+							<button class="btn btn-crannerGuardar" ng-click="editProject(proyecto)">Guardar</button>
+							<button class="btn btn-crannerMostrar" ng-show="publicado==false" ng-click="publicar(proyecto)">Mostrar</button>
+							<button class="btn btn-crannerOcultar" ng-show="publicado==true" ng-click="despublicar(proyecto)">Ocultar</button>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-2"></div>
+						<div class="col-md-8">
+							<div class="form-group">
+								<div class="panel panel-cranner panel-primary panel-primary-grupos-imagenes">
+									<div class="panel-heading panel-heading-grupos-imagenes" style="height:50px;">
+										<span style="float:left;"><label>Imágenes</label></span>
+										<span style="float:right;">
+												<button class="btn btn-crannerAddGrupoImagen" ng-click="crearGrupo(1)"># 1</button>
+												<button class="btn btn-crannerAddGrupoImagen" ng-click="crearGrupo(2)"># 2</button>
+												<button class="btn btn-crannerAddGrupoImagen" ng-click="crearGrupo(3)"># 3</button>
+										</span>
+									</div>
+										<div class="panel-body">
+											<div class="row" ng-if="gruposImagenes.length!=0">
+												<table class="table">
+												  <thead>
+												    <th width="15%">Tipo Grupo</th>
+												    <th width="60%">Imágenes</th>
+														<th width="10%">Órden</th>
+												    <th width="15%">Acciónes</th>
+												  </thead>
+												  <tbody>
+												    <tr ng-repeat="grupo in gruposImagenes">
+												      <td width="15%">Grupo {{grupo.tipoGrupo}}</td>
+												      <td width="55%">
+																<div style="text-align:left">
+																	<div ng-if="imagen.principal==1" ng-repeat="imagen in grupo.imagenes" style="width:70px; display:inline; margin-right:10px;">
+												            <img  class="img-rounded thumb-GruposImagenesPpal" width="70" ng-src="../../uploads/{{imagen.filename}}"/>
+																	</div>
+																	<div ng-if="imagen.principal==0" ng-repeat="imagen in grupo.imagenes" style="width:70px; display:inline;margin-right:10px;">
+												            <img  class="img-rounded thumb-GruposImagenes" width="70" ng-src="../../uploads/{{imagen.filename}}"/>
+																	</div>
+																</div>
+															</td>
+															<td width="15%">
+																<a ng-if="grupo.orden>0" href="" ng-click="subirPosicion(grupo)">
+																	<span class="glyphicon glyphicon-circle-arrow-up"></span>
+																</a>
+																<a ng-if="grupo.orden<=0" href="" style="text-decoration:none; color: #000000; cursor:default;">
+												          <span class="glyphicon glyphicon-circle-arrow-up"></span>
+												        </a>
+												        <label><b>&nbsp;{{grupo.orden}}</b>&nbsp;</label>
+																<a ng-if="grupo.orden<ordenGrupos" href="" ng-click="bajarPosicion(grupo)">
+																	<span class="glyphicon glyphicon-circle-arrow-down"></span>
+																</a>
+																<a ng-if="grupo.orden>=ordenGrupos" href="" style="text-decoration:none; color: #000000; cursor:default;">
+												          <span class="glyphicon glyphicon-circle-arrow-down"></span>
+												        </a>
+															</td>
+												      <td width="15%">
+												        <button class="btn btn-danger" ng-click="deleteGrupo(grupo)">Eliminar</button>
+															</td>
+												    </tr>
+												  </tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-2"></div>
+						</div>
+					</form>
+
+	<!-- MODAL GRUPO 1-->
+
+	<script type="text/ng-template" id="grupo1">
+	  <div class="modal-dialog proyecto-modal">
+	    <div class="modal-header galeriaImagenesModalHeader">
+	      <button type="button" class="close galeriaImagenesModalCloseButton" data-dismiss="modal" aria-label="Close" ng-click="close()"><span aria-hidden="true">&times;</span></button>
+	    </div>
+	    <div style="float:left;width:100%;">
+	      <div class="galeriaImagenesModalBody" style="text-align:center">
+						<h4>Carga de Imágenes - Grupo 1</h4>
+						<div class="row">
+							<div class="form-group">
+							</div>
+						</div>
+						<div class="row">
+							<form name="fGrupo1" role="form" ng-submit="grabarGrupo(fGrupo1)">
+								<div class="form-group">
+									<label class="control-label col-sm-4" for="imagenG1File">Imagen:</label>
+									<div class="col-md-8">
+										<input class="form-control" type="file" file-model="imagenG1File" name="imagenG1File" id="imagenG1File" ng-model="imagenG1File" required/>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="row">
+							<div class="form-group">
+								<label class="control-label col-sm-4">&nbsp;</label>
+								<div class="col-md-8">
+									<span style="float:left">(900px de ancho)</span>
+									<span style="color:red;float: right;font-weight: bold">{{uploadMessageError}}</span>
+									<span us-spinner="{radius:30, width:8, length: 16}"></span>
+								</div>
+							</div>
+						</div>
+				</div>
+	    </div>
+			<div class="modal-footer">
+				 <button class="btn btn-crannerGuardar" ng-click="grabarGrupo()">Guardar</button>
+				 <button class="btn btn-crannerEliminar" type="button" ng-click="cancelar()">Cancelar</button>
+		 </div>
+	  </div>
+	  <!-- /.modal-dialog -->
+	</script>
+
+	<!-- FIN MODAL -->
+
+	<!-- MODAL GRUPO 2-->
+
+	<script type="text/ng-template" id="grupo2">
+		<div class="modal-dialog proyecto-modal">
+			<div class="modal-header galeriaImagenesModalHeader">
+				<button type="button" class="close galeriaImagenesModalCloseButton" data-dismiss="modal" aria-label="Close" ng-click="close()"><span aria-hidden="true">&times;</span></button>
+			</div>
+			<div style="float:left;width:100%;">
+				<div class="galeriaImagenesModalBody" style="text-align:center">
+						<h4>Carga de Imágenes - Grupo 2</h4>
+						<div class="row">
+							<div class="form-group">
+							</div>
+						</div>
+						<form name="fGrupo2" role="form" ng-submit="grabarGrupo(fGrupo2)">
+							<div class="row">
+								<div class="form-group">
+									<label class="control-label col-sm-4" for="imagen1G2File">Imagen&nbsp;1:</label>
+									<div class="col-md-8">
+										<input class="form-control" type="file" file-model="imagen1G2File" name="imagen1G2File" id="imagen1G2File" ng-model="imagen1G2File"/>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="form-group">
+									<label class="control-label col-sm-4">&nbsp;</label>
+									<div class="col-md-8">
+										<span style="float:left">(449px x 299px)</span>
+										<span style="color:red;float: right;font-weight: bold">{{uploadMessageG2F1Error}}</span>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="form-group">
+									<label class="control-label col-sm-4" for="imagen2G2File">Imagen&nbsp;2:</label>
+									<div class="col-md-8">
+										<input class="form-control" type="file" file-model="imagen2G2File" name="imagen2G2File" id="imagen2G2File" ng-model="imagen2G2File"/>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="form-group">
+									<label class="control-label col-sm-4">&nbsp;</label>
+									<div class="col-md-8">
+										<span style="float:left">(449px x 299px)</span>
+										<span style="color:red;float: right;font-weight: bold">{{uploadMessageG2F2Error}}</span>
+									</div>
+								</div>
+							</div>
+						</form>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-crannerGuardar" ng-click="grabarGrupo()">Guardar</button>
+				<button class="btn btn-crannerEliminar" type="button" ng-click="cancelar()">Cancelar</button>
+		 </div>
+		</div>
+		<!-- /.modal-dialog -->
+	</script>
+
+	<!-- FIN MODAL -->
+
+	<!-- MODAL GRUPO 3-->
+	<script type="text/ng-template" id="grupo3">
+		<div class="modal-dialog proyecto-modal">
+			<div class="modal-header galeriaImagenesModalHeader">
+				<button type="button" class="close galeriaImagenesModalCloseButton" data-dismiss="modal" aria-label="Close" ng-click="close()"><span aria-hidden="true">&times;</span></button>
+			</div>
+			<div style="float:left;width:100%;">
+				<div class="galeriaImagenesModalBody" style="text-align:center">
+						<h4>Carga de Imágenes - Grupo 3</h4>
+						<div class="row">
+							<div class="form-group">
+							</div>
+						</div>
+						<form name="fGrupo3" role="form" ng-submit="grabarGrupo(fGrupo3)">
+							<div class="row">
+								<div class="form-group">
+									<label class="control-label col-sm-4" for="imagen1G3File">Imagen Principal:</label>
+									<div class="col-md-8">
+										<input class="form-control" type="file" file-model="imagen1G3File" name="imagen1G3File" id="imagen1G3File" ng-model="imagen1G3File"/>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="form-group">
+									<label class="control-label col-sm-4">&nbsp;</label>
+									<div class="col-md-8">
+										<span style="float:left">(449px x 596px)</span>
+										<span style="color:red;float: right;font-weight: bold">{{uploadMessageG3F1Error}}</span>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="form-group">
+									<label class="control-label col-sm-4" for="imagen2G3File">Imagen&nbsp;2:</label>
+									<div class="col-md-8">
+										<input class="form-control" type="file" file-model="imagen2G3File" name="imagen2G3File" id="imagen2G3File" ng-model="imagen2G3File"/>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="form-group">
+									<label class="control-label col-sm-4">&nbsp;</label>
+									<div class="col-md-8">
+										<span style="float:left">(449px x 298px)</span>
+										<span style="color:red;float: right;font-weight: bold">{{uploadMessageG3F2Error}}</span>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="form-group">
+									<label class="control-label col-sm-4" for="imagen3G3File">Imagen&nbsp;3:</label>
+									<div class="col-md-8">
+										<input class="form-control" type="file" file-model="imagen3G3File" name="imagen3G3File" id="imagen3G3File" ng-model="imagen3G3File"/>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="form-group">
+									<label class="control-label col-sm-4">&nbsp;</label>
+									<div class="col-md-8">
+										<span style="float:left">(449px x 298px)</span>
+										<span style="color:red;float: right;font-weight: bold">{{uploadMessageG3F3Error}}</span>
+									</div>
+								</div>
+							</div>
+						</form>
+						<div class="row">
+							<div class="form-group">
+								<div class="col-sm-4"></div>
+								<div class="col-md-8">
+									<span style="color:green;float: left;font-weight: bold">{{uploadMessage}}</span>
+									<span style="color:red;float: left;font-weight: bold">{{uploadMessageError}}</span>
+								</div>
+							</div>
+						</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				 <button class="btn btn-crannerGuardar" ng-click="grabarGrupo()">Guardar</button>
+				 <button class="btn btn-crannerEliminar" type="button" ng-click="cancelar()">Cancelar</button>
+		 </div>
+		</div>
+		<!-- /.modal-dialog -->
+	</script>
+
+	<!-- FIN MODAL -->
+
+<div id="spinner">
+</div>
+
+<div ng-show="spinnerActive==1" ng-style="{'z-index': 1040 + (index &amp;&amp; 1 || 0) + index*10}" modal-in-class="in" uib-modal-animation-class="fade" class="modal-backdrop fade in" uib-modal-backdrop="modal-backdrop" modal-animation="true" style="z-index: 1040" id="spinnerBack"></div>

@@ -1,0 +1,28 @@
+<div ng-controller="ListadoPortadasController" data-ng-init="refresh()">
+  <div class="jumbotron jumbotron-angosto">
+    <h2>
+      <span style="float:left;">Listado de Banners</span>
+      <button style="float:right;font-size:40px;opacity:1" type="button" class="close" data-dismiss="modal" aria-label="Crear Banner" ng-click="crearPortada()"><span aria-hidden="true">+</span></button>
+    </h2>
+  </div>
+  <table class="table">
+    <thead>
+      <th>ID</th>
+      <th>Descripción</th>
+      <th>Action</th>
+    </thead>
+    <tbody>
+      <tr ng-repeat="banner in portadas">
+        <td>{{banner._id}}</td>
+        <td>
+          <div>
+              <img class="img-rounded" width="100" ng-src="../../uploads/banners/{{banner.imagen}}"/>
+          </div>
+        </td>
+        <td>
+          <button class="btn btn-crannerEliminar" ng-click="deletePortada(banner)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

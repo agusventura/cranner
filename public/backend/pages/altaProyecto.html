@@ -1,0 +1,66 @@
+<div ng-controller="AltaController">
+	<div class="col-md-12">
+		<div class="jumbotron jumbotron-angosto">
+			<h2>
+				<span style="float:left;">Alta de Proyecto</span>
+				<button style="float:right;font-size:40px;opacity:1" type="button" class="close" data-dismiss="modal" aria-label="Cancelar" ng-click="cancelar()"><span aria-hidden="true">&times;</span></button>
+			</h2>
+		</div>
+	</div>
+
+<form class="form-horizontal" role="form" name="altaProyectoForm">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="col-md-2" style="text-align:right;padding-right:25px;">
+				<div class="form-group">
+					<label class="control-label" for="nombreProyecto">Nombre:</label>
+				</div>
+			</div>
+			<div class="col-md-10">
+					<div class="form-group">
+						<input type="text" class="form-control" ng-model="proyecto.nombre" id="nombreProyecto" name="nombreProyecto">
+					</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="col-md-2" style="text-align:right;padding-right:25px;">
+				<div class="form-group">
+
+				</div>
+			</div>
+			<div class="col-md-10">
+				<div class="form-group">
+					<span style="color:#FF0000"><b>{{nombreMessageError}}</b></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="col-md-2" style="text-align:right;padding-right:25px;">
+				<div class="form-group">
+					<label class="control-label" for="descripcionProyecto">Descripción:</label>
+				</div>
+			</div>
+			<div class="col-md-10">
+				<div class="form-group">
+					<textarea class="form-control" ng-model="proyecto.descripcion" id="descripcionProyecto" rows="6" style="resize:none;"></textarea>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="col-md-2">
+			</div>
+			<div class="col-md-10">
+				<div class="form-group">
+					<button class="btn btn-crannerGuardar" ng-click="createProyect(proyecto)">Guardar</button>
+					</div>
+			</div>
+		</div>
+	</div>
+</form>
+</div>

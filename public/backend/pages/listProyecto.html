@@ -1,0 +1,49 @@
+<div ng-controller="MainController" data-ng-init="refresh()">
+  <div class="jumbotron jumbotron-angosto">
+    <h2>
+      <span style="float:left;">Listado de Proyectos</span>
+      <button style="float:right;font-size:40px;opacity:1" type="button" class="close" data-dismiss="modal" aria-label="Crear Proyecto" ng-click="crearProyecto()"><span aria-hidden="true">+</span></button>
+    </h2>
+  </div>
+  <table class="table">
+    <thead>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Portada</th>
+      <th>Orden</th>
+      <th>Action</th>
+    </thead>
+    <tbody>
+      <tr ng-repeat="proyecto in proyectos">
+        <td>{{proyecto._id}}</td>
+        <td>{{proyecto.nombre}}</td>
+        <td>
+          <div>
+              <img class="img-rounded" width="70" ng-src="../../uploads/portadas/{{proyecto.foto_portada}}"/>
+          </div>
+        </td>
+        <td width="10%">
+          <a ng-if="proyecto.orden>0" href="" ng-click="subirPosicion(proyecto)">
+            <span class="glyphicon glyphicon-circle-arrow-up"></span>
+          </a>
+          <a ng-if="proyecto.orden<=0" href="" style="text-decoration:none; color: #000000; cursor:default;">
+            <span class="glyphicon glyphicon-circle-arrow-up"></span>
+          </a>
+          <label><b>&nbsp;{{proyecto.orden}}</b>&nbsp;</label>
+          <a ng-if="proyecto.orden<ordenProyectos" href="" ng-click="bajarPosicion(proyecto)">
+            <span class="glyphicon glyphicon-circle-arrow-down"></span>
+          </a>
+          <a ng-if="proyecto.orden>=ordenProyectos" href="" style="text-decoration:none; color: #000000; cursor:default;">
+            <span class="glyphicon glyphicon-circle-arrow-down"></span>
+          </a>
+        </td>
+        <td>
+          <button class="btn btn-crannerMostrar" ng-show="proyecto.publicado==false" ng-click="publicar(proyecto)">Mostrar</button>
+          <button class="btn btn-crannerOcultar" ng-show="proyecto.publicado==true" ng-click="despublicar(proyecto)">Ocultar</button>
+          <button class="btn btn-crannerEditar" ng-click="editProject(proyecto)">Editar</button>
+          <button class="btn btn-crannerEliminar" ng-click="deleteProject(proyecto)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,75 @@
+<!DOCTYPE>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="../images/resources/favicon.png"/>
+	<title>Proyectos</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+	<link rel="stylesheet" href="../css/backend.css">
+	<script src="../js/bower_components/angular/angular.min.js"></script>
+	<script src="../js/bower_components/angular-route/angular-route.min.js"></script>
+	<script src="../js/bower_components/angular-animate/angular-animate.min.js"></script>
+	<script src="../js/bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+	<script src="../js/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+	<script src="../js/bower_components/angular-cookies/angular-cookies.min.js"></script>
+	<script src="../js/angular-resource.min.js"></script>
+	<script src="../js/jquery-2.2.4.min.js"></script>
+	<script src="../js/bower_components/spin.js/spin.min.js"></script>
+	<script src="../js/bower_components/spin.js/jquery.spin.js"></script>
+	<script src="app.js"></script>
+	<script src="controllers/mainController.js"></script>
+	<script src="controllers/altaController.js"></script>
+	<script src="controllers/editController.js"></script>
+	<script src="controllers/altaPortadaController.js"></script>
+	<script src="controllers/listadoPortadasController.js"></script>
+	<script src="controllers/modalGrupoImagenesController.js"></script>
+	<script src="controllers/loginController.js"></script>
+  <script src="services/fileUpload.js"></script>
+	<script src="services/authentication.js"></script>
+</head>
+<body>
+	<div class="container">
+		<nav class="navbar navbar-inverse">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <a class="navbar-brand" href="#/">Cranner</a>
+		    </div>
+		    <ul class="nav navbar-nav">
+					<li role="menuitem"><a href="#/ListadoPortadas">Banners</a></li>
+					<li role="menuitem"><a href="#/Listado">Proyectos</a></li>
+
+
+		      <!--<li class="active"><a href="#/">Home</a></li>-->
+					<!--<li class="dropdown" dropdown>
+		        <a id="dropdown-Listados" class="dropdown-toggle" dropdown-toggle href="">
+							Cargas <span class="caret"></span>
+						</a>
+		        <ul class="dropdown-menu" dropdown-menu role="menu" aria-labelledby="dropdown-Listados">
+		          <li role="menuitem"><a href="#/Listado">Proyectos</a></li>
+		          <li role="menuitem"><a href="#/ListadoPortadas">Portadas</a></li>
+		        </ul>
+		      </li>-->
+					<!--<li class="dropdown" dropdown>
+		        <a id="dropdown-Crear" class="dropdown-toggle" dropdown-toggle href="">
+							Crear
+		        	<span class="caret"></span>
+						</a>
+		        <ul class="dropdown-menu" dropdown-menu role="menu" aria-labelledby="dropdown-Crear">
+		          <li role="menuitem"><a href="#/Alta">Proyecto</a></li>
+		          <li role="menuitem"><a href="#/AltaPortada">Portada</a></li>
+		        </ul>
+		      </li>-->
+		    </ul>
+				<ul class="nav navbar-nav navbar-right">
+		      <li><a href="#/Login"><span class="glyphicon glyphicon-log-in"></span> Salir</a></li>
+		    </ul>
+		  </div>
+		</nav>
+		<div ng-view>
+		</div>
+	</div>
+</body>
+</html>

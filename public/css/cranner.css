@@ -1,0 +1,715 @@
+body{
+  background-color: #FFFFFF !important;
+}
+
+@font-face {
+    font-family: Raleway-Medium;
+    src: url(../fonts/Raleway-Medium.ttf);
+}
+
+@font-face {
+    font-family: Raleway-SemiBold;
+    src: url(../fonts/Raleway-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: Raleway-Light;
+    src: url(../fonts/Raleway-Light.ttf);
+}
+
+@font-face {
+    font-family: Raleway-Bold;
+    src: url(../fonts/Raleway-Bold.ttf);
+}
+
+.font-title{
+    font-family: Raleway-SemiBold;
+    font-size: 18pt;
+}
+
+.font-nav-bar{
+    width:86px !important;
+}
+
+.font-nav-bar a{
+  font-family: Raleway-Medium;
+  font-size: 9pt;
+}
+
+.font-nav-bar a:active, .font-nav-bar a:hover{
+  font-family: Raleway-Bold;
+  font-size: 9pt;
+}
+
+.font-paragraph{
+    font-family: Raleway-Light;
+    font-size: 18pt;
+}
+
+.font-linkedin{
+  font-family: Raleway-Light;
+}
+
+.font-mail{
+  font-family: Raleway-Medium;
+  font-size: 26pt;
+}
+
+.font-mail hover{
+  cursor: pointer;
+}
+
+.font-mail a{
+  color: #FFFFFF;
+  text-decoration: none;
+  cursor: default;
+}
+
+.font-mail a:hover{
+  color: #FFD250;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.font-tel{
+    font-family: Raleway-Light;
+    font-size: 26pt;
+}
+
+#slides_control > div{
+  height: auto;
+}
+
+img{
+  margin:auto;
+  width: 100%;
+}
+
+.logoCranner{
+  margin:0 !important;
+  margin-left: -22px !important;
+  width: 180px !important;
+
+}
+
+#slides_control {
+  /*position:absolute;*/
+  /*width: 1280px;*/
+  /*left:50%;*/
+  top:20px;
+  /*margin-left:-200px;*/
+}
+
+.col-md-12{
+  /*width: 1280px !important;*/
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.navbar{
+  border: none !important;
+  height:75px !important;
+  background-color: #FFFFFF !important;
+}
+
+.navbar-nomargin{
+    margin-bottom:0px !important;
+}
+
+.navbar-brand{
+  height:45px !important;
+  padding:0px !important;
+  margin:0px !important;
+}
+
+.navbar-brand img{
+  width:85%;
+}
+
+.brand-footer{
+  margin-left:15px !important;
+}
+
+.nav-container{
+  height: 100%;
+  padding-top:20px;
+}
+
+.nav-container-orange{
+  background-color: #FFD250 !important;
+  height: 100px;
+  padding-top:30px;
+  padding-top:40px;
+}
+
+.navbar-nav-custom{
+  padding-top:10px;
+}
+
+.navbar-nav-custom > li > a{
+  padding-bottom: 0px !important;
+}
+
+.navbar-nav-custom > li > a:hover, .navbar-nav-custom > li > a:focus{
+  background-color: #FFFFFF;
+}
+
+.navbar-nav-custom-orange > li > a{
+  padding-bottom: 0px !important;
+}
+
+.navbar-nav-custom-orange > li > a:hover, .navbar-nav-custom-orange > li > a:focus{
+  background-color: #FFD250;
+}
+
+.container{
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  width: 1308px !important;
+}
+
+.row{
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+.carousel-indicators .active{
+   border: 3px solid #FFD250 !important;
+   background-color: #FFD250 !important;
+   width: 15px !important;
+   height: 15px !important;
+   margin-right: 10px;
+}
+
+.carousel-indicators li{
+  border: 3px solid #FFD250 !important;
+  width: 14px !important;
+  height: 14px !important;
+  margin-right: 10px;
+}
+
+#about{
+  background-color: #FFD250;
+  height:795px;
+}
+
+.aboutLeft{
+  /*width:30%;
+  min-width: 30%;
+  float:left;*/
+  height:100%;
+  text-align:center;
+  /*line-height: 300px;*/
+}
+
+.aboutLeft img{
+  position:relative;
+  top:39%;
+}
+
+.aboutRight{
+  /*width:40%;
+  height:100%;
+  float:left;*/
+  margin-top: 100px;
+  margin-bottom:50px;
+}
+.aboutRight p{
+  margin-bottom:25px;
+}
+
+.innerAboutRight{
+  width:67%;
+}
+
+#sProyectos{
+  background-color: #FFFFFF;
+  height:350px;
+  width:100%;
+  display:block;
+  margin-bottom: 50px;
+  margin-top:35px;
+}
+
+.proyectosLeft{
+  height:100%;
+  text-align:center;
+}
+
+.proyectosLeft img{
+  position:relative;
+  top:33%;
+}
+
+.proyectosRight{
+  /*height:100%;*/
+  float:left;
+  margin-top: 100px;
+  /*margin-bottom:50px;*/
+}
+
+.insideProyectosRight{
+      width:68%;
+}
+/*
+.insideProyectosRight p{
+  margin-top:20px;
+}
+*/
+
+#presentacionProyectos{
+  background-color: #000000;
+  height:auto;
+  width:100%;
+  display:block;
+  float:left;
+}
+
+#contacto{
+  background-color: #000000;
+  color:#FFFFFF;
+  height:350px;
+  width:100%;
+  display:block;
+  padding-top: 35px;
+}
+
+.contactoLeft{
+  height:100%;
+  text-align:center;
+}
+
+.contactoLeft img{
+  position:relative;
+  top:36%;
+}
+
+.contactoRight{
+  width:40%;
+  /*height:100%;*/
+
+  position: relative;
+  top: 36%;
+  /*margin-top: 70px;
+  margin-bottom:50px;*/
+}
+/*
+.insideContactoRight{
+      width:60%;
+}
+
+.insideAboutRight p{
+    margin-top:20px;
+}
+
+.insideAboutRight h2{
+  margin-bottom:50px;
+}
+*/
+
+.helper {
+    display: inline-block;
+    height: 100%;
+}
+
+.proyectoImage{
+  max-width:426px;
+  height:auto;
+  float:left;
+  margin:0;
+  padding:0;
+  text-align:center;
+}
+
+.proyectoImageHover{
+  color: #FFFFFF;
+  display: none;
+  font-family: Raleway-SemiBold;
+  font-size: 18pt;
+  margin-top: -223px;
+  position: absolute;
+  width: 436px;
+  cursor:pointer;
+}
+
+.proyectoImage:hover .proyectoImageHover{
+  display:block;
+}
+
+.logoAbout{
+    width:268px;
+    margin-left: -25px;
+    margin-bottom: 60px;
+}
+
+.tLinkedin{
+    width:85%;
+}
+
+.tLinkedin label{
+  font-weight: normal;
+}
+
+#proyectosPortadas{
+  width:100%;
+  float:left;
+}
+
+.proyecto-modal{
+  width:100%;
+  margin-top:5px;
+}
+
+.descripcionProyecto{
+  float:left;
+  width:100%;
+  min-height: 200px;
+  background-color: #FFD250;
+  padding-bottom: 50px;
+}
+
+.descripcionProyectoLeft{
+  width:13%;
+  min-height: 200px;
+  float:left;
+  text-align:center;
+}
+
+.descripcionProyectoRight{
+  width:71%;
+  /*height:100%;*/
+  float:left;
+  margin-top: 100px;
+  /*margin-bottom:50px;*/
+}
+
+.detalleProyectoModalHeader{
+  padding: 0px !important;
+  padding-right: 10px !important;
+}
+
+.detalleProyectoModalCloseButton{
+  font-size:50px !important;
+  opacity: 1 !important;
+}
+
+.descripcionProyectoRight p{
+  margin-top: 30px;
+}
+
+.detalleProyectoModalTitle{
+    font-family: Raleway-SemiBold;
+    font-size: 18pt;
+}
+
+.descripcionProyectoImagenes{
+  float:left;
+  width:100%;
+  min-height: 200px;
+  background-color: #FFFFFF;
+  /*padding-bottom: 50px;*/
+}
+
+.navbar-cranner-footer{
+  float:right;
+  margin-right:30px;
+}
+
+.navbar-cranner-footer>li>a{
+  padding-top: 23px !important;
+}
+
+.font-mail > a{
+  cursor:default !important;
+}
+
+.font-mail > a:hover{
+  cursor:pointer !important;
+}
+
+.modal-content{
+  border-radius: 0px !important;
+}
+
+.nombreProyectos{
+  letter-spacing: 5px;
+  cursor:pointer;
+}
+
+.aboutDisenio{
+  width:111px;
+  height:120px;
+  cursor: pointer;
+}
+
+.aDivVentas{
+  width:111px;
+  height:120px;
+  background-image: url("../images/resources/disenio.png");
+}
+
+.aDivVentas:hover{
+  width:111px;
+  height:120px;
+  background-image: url("../images/resources/disenio_hover.png");
+}
+
+#imgDisenio :hover{
+  src: url("../images/resources/disenio_hover.png");
+}
+
+#imgVentas:hover{
+  src: url("../images/resources/ventas_hover.png");
+}
+
+.labelDisenioNom{
+  font-size:16pt;
+  font-weight:bolder !important;
+  float: left;
+  float:left;
+}
+
+.labelDisenio{
+  font-size:14pt;
+  float:left;
+}
+
+.labelVentasNom{
+  font-size:16pt;
+  font-weight:bolder !important;
+  float:left;
+}
+
+.labelVentas{
+  font-size:14pt;
+  float:left;
+}
+
+.aboutLinks{
+    float:left;
+}
+
+.imagenTipoGrupo1{
+  max-width: 900px !important;
+}
+
+.imagenTipoGrupo2{
+  max-width: 449px !important;
+  max-height: 299px !important;
+  max-height: 596px !important;
+  float:left;
+}
+
+.imagenTipoGrupo3Ppal{
+  max-width: 449px !important;
+  max-height: 596px !important;
+  float:left;
+}
+
+.imagenTipoGrupo3{
+  max-width: 449px !important;
+  max-height: 298px !important;
+  float:left;
+}
+
+.descripcionProyectoImagenes{
+  text-align:center;
+  background-color: #FFD250;
+}
+
+.divDisenioNom{
+  text-align:center;
+}
+
+.divVentasNom{
+  text-align:center;
+}
+
+.divAboutLinks{
+  text-align:left;
+}
+
+.aNavBar{
+  color:#000000;
+  text-decoration:none;
+  backface-visibility: hidden;
+}
+
+@media screen and (min-width: 1400px) {
+  .divAboutLinks{
+    width:40%;
+  }
+}
+
+@media screen and (max-width: 1040px) {
+  .font-paragraph{
+    font-size:16px;
+  }
+  .labelDisenioNom{
+    font-size:12pt;
+  }
+  .labelVentasNom{
+    font-size:12pt;
+  }
+  .labelDisenio{
+    font-size:10pt;
+  }
+  .labelVentas{
+    font-size:10pt;
+  }
+  .logoAbout{
+    margin-left:-15px;
+  }
+  .innerAboutRight{
+    width:100%;
+  }
+  .insideProyectosRight{
+    width:100%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #about{
+    height: 635px;
+  }
+  .aboutLeft {
+    height:15%;
+  }
+  .proyectosLeft {
+    height:15%;
+    margin-bottom:50px;
+  }
+  .logoAbout {
+    display:none;
+  }
+  .font-mail {
+    font-size: 20pt;
+  }
+  #ulNavBarFooter {
+    display:none;
+  }
+  #ulNavBarHeader{
+    display:none;
+  }
+  .contactoLeft{
+    display:none;
+  }
+  .logoCranner{
+    margin-left: -8px !important;
+  }
+  #sProyectos{
+    height: 200px;
+  }
+  .aboutLinks{
+
+  }
+  .proyectoImage{
+    max-width:none;
+    width:100%;
+  }
+  .proyectoImageHover{
+    margin-top:-225px;
+    width:100%;
+  }
+  .imagenTipoGrupo3Ppal{
+    float:none;
+    max-width: 100% !important;
+  }
+  .imagenTipoGrupo3{
+    float:none;
+    max-width: 100% !important;
+  }
+  .imagenTipoGrupo2{
+    float:none;
+    max-width: 100% !important;
+  }
+  #contacto{
+    height:220px;
+    padding-top:0px;
+  }
+  .contactoRight{
+    top:29%;
+  }
+  .divAboutLinks{
+    width:30%;
+  }
+  .insideProyectosRight{
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #about{
+    height: 730px;
+  }
+  #imgDisenio{
+    width: 90px;
+  }
+  #imgVentas{
+    width: 90px;
+  }
+  .proyectoImageHover{
+    margin-top:-200px;
+    width:380px;
+  }
+  .proyecto-modal{
+    margin: 0 !important;
+  }
+  .divAboutLinks{
+    width:50%;
+    padding-left:0px;
+    padding-right:0px;
+  }
+  .divDisenioNom{
+    text-align:center;
+    margin:0;
+    padding-left:0px;
+    padding-right:0px;
+  }
+
+  .divVentasNom{
+    text-align:center;
+    margin:0;
+    padding-left:0px;
+    padding-right:0px;
+  }
+  .insideProyectosRight{
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #about{
+    height: 690px;
+  }
+  #imgDisenio{
+    width: 50px;
+  }
+  #imgVentas{
+    width: 50px;
+  }
+  .proyectoImageHover{
+    margin-top:-160px;
+    width:310px;
+  }
+  .labelDisenioNom{
+    font-size:10pt;
+  }
+  .labelVentasNom{
+    font-size:10pt;
+  }
+  .labelDisenio{
+    font-size:9pt;
+  }
+  .labelVentas{
+    font-size:9pt;
+  }
+}
+
+/*CON ESTO EVITO QUE LA PRIMERA VEZ QUE PASO POR ARRIBA DE LOS OBJETOS QUE EN EL HOVER CAMBIAN DE IMAGEN O
+TIENEN ALGUN EFECTO, NO SE VEA EL PARPADEO QUE HACIA*/
+{
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility:    hidden;
+  -ms-backface-visibility:     hidden;
+}

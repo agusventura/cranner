@@ -1,0 +1,761 @@
+.panel-heading-black{
+  background-color: #000000 !important;
+  background-image: linear-gradient(to bottom,#000000 0,#000000 100%) !important;
+  color: #FFFFFF !important;
+}
+
+.panel-body-black{
+  border-color: #000000 !important;
+  background-image: linear-gradient(to bottom,#000000 0,#000000 100%) !important;
+}
+
+.col-md-12{
+  /*width: 1280px !important;*/
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.row{
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+.proyecto-modal{
+  width:100%;
+  margin-top:5px;
+}
+
+.galeriaImagenesModalHeader{
+  padding: 0px !important;
+  padding-right: 10px !important;
+}
+
+.galeriaImagenesModalCloseButton{
+  font-size:21px !important;
+  opacity: 1 !important;
+}
+
+.galeriaImagenesModalBody{
+  float:left;
+  width:100%;
+  min-height: 100px;
+  background-color: #FFFFFF;
+  padding-bottom: 50px;
+}
+
+.thumb-GruposImagenes{
+  margin-right: 10px;
+  border: 2px solid #000000;
+}
+
+.thumb-GruposImagenesPpal{
+  margin-right: 10px;
+  border: 2px solid #FFD250;
+}
+
+.btn-crannerMostrar{
+  background-image: linear-gradient(to bottom, #0000FA 0px, #0000FA 100%);
+  border: 3px solid #0000FA;
+  color: #FFFFFF;
+  font-weight: bold;
+  border-radius: 0px !important;
+  text-transform: uppercase;
+}
+
+.btn-crannerMostrar:focus,
+.btn-crannerMostrar.focus {
+  background-image: linear-gradient(to bottom, #0000FA 0px, #0000FA 100%);
+  border: 3px solid #0000FA;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.btn-crannerMostrar:hover {
+  background-image: linear-gradient(to bottom, #0000FA 0px, #0000FA 100%);
+  border: 3px solid #0000FA;
+  color: #FFFFFF;
+  opacity: 0.5;
+
+}
+
+.btn-crannerMostrar:active,
+.btn-crannerMostrar.active,
+.open > .dropdown-toggle.btn-crannerMostrar {
+  background-image: linear-gradient(to bottom, #0000FA 0px, #0000FA 100%);
+  border: 3px solid #0000FA;
+  color: #FFFFFF;
+  opacity: 0.5;
+
+}
+
+.btn-crannerMostrar:active:hover,
+.btn-crannerMostrar.active:hover,
+.open > .dropdown-toggle.btn-crannerMostrar:hover,
+.btn-crannerMostrar:active:focus,
+.btn-crannerMostrar.active:focus,
+.open > .dropdown-toggle.btn-crannerMostrar:focus,
+.btn-crannerMostrar:active.focus,
+.btn-crannerMostrar.active.focus,
+.open > .dropdown-toggle.btn-crannerMostrar.focus {
+  background-image: linear-gradient(to bottom, #0000FA 0px, #0000FA 100%);
+  border: 3px solid #0000FA;
+  color: #FFFFFF;
+  opacity: 0.5;
+
+}
+
+.btn-crannerMostrar:active,
+.btn-crannerMostrar.active,
+.open > .dropdown-toggle.btn-crannerMostrar {
+  background-image: none;
+}
+
+.btn-crannerMostrar.disabled:hover,
+.btn-crannerMostrar[disabled]:hover,
+fieldset[disabled] .btn-crannerMostrar:hover,
+.btn-crannerMostrar.disabled:focus,
+.btn-crannerMostrar[disabled]:focus,
+fieldset[disabled] .btn-crannerMostrar:focus,
+.btn-crannerMostrar.disabled.focus,
+.btn-crannerMostrar[disabled].focus,
+fieldset[disabled] .btn-crannerMostrar.focus {
+  background-image: linear-gradient(to bottom, #0000FA 0px, #0000FA 100%);
+  border: 3px solid #0000FA;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.btn-crannerMostrar .badge {
+  background-image: linear-gradient(to bottom, #0000FA 0px, #0000FA 100%);
+  border: 3px solid #0000FA;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.btn-crannerMostrar:active{
+  background-image: linear-gradient(to bottom, #0000FA 0px, #0000FA 100%);
+  border: 3px solid #0000FA;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.btn-crannerOcultar{
+  background-image: linear-gradient(to bottom, #FFFFFF 0px, #FFFFFF 100%);
+  border: 3px solid #0000FA;
+  color: #0000FA;
+  font-weight: bold;
+  border-radius: 0px !important;
+  text-transform: uppercase;
+}
+
+.btn-crannerOcultar:hover{
+  border: 3px solid #0000FA;
+  color: #0000FA;
+  opacity: 0.5;
+}
+
+.btn-crannerOcultar:focus,
+.btn-crannerOcultar.focus {
+  border: 3px solid #0000FA;
+  color: #0000FA;
+  opacity: 0.5;
+}
+
+.btn-crannerOcultar:active,
+.btn-crannerOcultar.active,
+.open > .dropdown-toggle.btn-crannerOcultar {
+  border: 3px solid #0000FA;
+  color: #0000FA;
+  opacity: 0.5;
+
+}
+
+.btn-crannerOcultar:active:hover,
+.btn-crannerOcultar.active:hover,
+.open > .dropdown-toggle.btn-crannerOcultar:hover,
+.btn-crannerOcultar:active:focus,
+.btn-crannerOcultar.active:focus,
+.open > .dropdown-toggle.btn-crannerOcultar:focus,
+.btn-crannerOcultar:active.focus,
+.btn-crannerOcultar.active.focus,
+.open > .dropdown-toggle.btn-crannerOcultar.focus {
+  border: 3px solid #0000FA;
+  color: #0000FA;
+  opacity: 0.5;
+
+}
+
+.btn-crannerOcultar:active,
+.btn-crannerOcultar.active,
+.open > .dropdown-toggle.btn-crannerOcultar {
+  background-image: none;
+}
+
+.btn-crannerOcultar.disabled:hover,
+.btn-crannerOcultar[disabled]:hover,
+fieldset[disabled] .btn-crannerOcultar:hover,
+.btn-crannerOcultar.disabled:focus,
+.btn-crannerOcultar[disabled]:focus,
+fieldset[disabled] .btn-crannerOcultar:focus,
+.btn-crannerOcultar.disabled.focus,
+.btn-crannerOcultar[disabled].focus,
+fieldset[disabled] .btn-crannerOcultar.focus {
+  border: 3px solid #0000FA;
+  color: #0000FA;
+  opacity: 0.5;
+}
+
+.btn-crannerOcultar .badge {
+  border: 3px solid #0000FA;
+  color: #0000FA;
+  opacity: 0.5;
+}
+
+.btn-crannerOcultar:active{
+  border: 3px solid #0000FA;
+  color: #0000FA;
+  opacity: 0.5;
+}
+
+.btn-crannerLogin{
+  background-image: linear-gradient(to bottom, #008496 0px, #008496 100%);
+  border: 3px solid #008496;
+  color: #FFFFFF;
+  font-weight: bold;
+  border-radius: 0px !important;
+  text-transform: uppercase;
+}
+
+.btn-crannerLogin:focus,
+.btn-crannerLogin.focus {
+  background-image: linear-gradient(to bottom, #008496 0px, #008496 100%);
+  border: 3px solid #008496;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.btn-crannerLogin:hover {
+  background-image: linear-gradient(to bottom, #008496 0px, #008496 100%);
+  border: 3px solid #008496;
+  color: #FFFFFF;
+  opacity: 0.5;
+
+}
+
+.btn-crannerLogin:active,
+.btn-crannerLogin.active,
+.open > .dropdown-toggle.btn-crannerLogin {
+  background-image: linear-gradient(to bottom, #008496 0px, #008496 100%);
+  border: 3px solid #008496;
+  color: #FFFFFF;
+  opacity: 0.5;
+
+}
+
+.btn-crannerLogin:active:hover,
+.btn-crannerLogin.active:hover,
+.open > .dropdown-toggle.btn-crannerLogin:hover,
+.btn-crannerLogin:active:focus,
+.btn-crannerLogin.active:focus,
+.open > .dropdown-toggle.btn-crannerLogin:focus,
+.btn-crannerLogin:active.focus,
+.btn-crannerLogin.active.focus,
+.open > .dropdown-toggle.btn-crannerLogin.focus {
+  background-image: linear-gradient(to bottom, #008496 0px, #008496 100%);
+  border: 3px solid #008496;
+  color: #FFFFFF;
+  opacity: 0.5;
+
+}
+
+.btn-crannerLogin:active,
+.btn-crannerLogin.active,
+.open > .dropdown-toggle.btn-crannerLogin {
+  background-image: none;
+}
+
+.btn-crannerLogin.disabled:hover,
+.btn-crannerLogin[disabled]:hover,
+fieldset[disabled] .btn-crannerLogin:hover,
+.btn-crannerLogin.disabled:focus,
+.btn-crannerLogin[disabled]:focus,
+fieldset[disabled] .btn-crannerLogin:focus,
+.btn-crannerLogin.disabled.focus,
+.btn-crannerLogin[disabled].focus,
+fieldset[disabled] .btn-crannerLogin.focus {
+  background-image: linear-gradient(to bottom, #008496 0px, #008496 100%);
+  border: 3px solid #008496;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.btn-crannerLogin .badge {
+  background-image: linear-gradient(to bottom, #008496 0px, #008496 100%);
+  border: 3px solid #008496;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.btn-crannerLogin:active{
+  background-image: linear-gradient(to bottom, #008496 0px, #008496 100%);
+  border: 3px solid #008496;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.btn-crannerEliminar{
+  background-image: linear-gradient(to bottom, #FF0000 0px, #FF0000 100%);
+  border: 3px solid #FF0000;
+  color: #FFFFFF;
+  font-weight: bold;
+  border-radius: 0px !important;
+  text-transform: uppercase;
+}
+
+.btn-crannerEliminar:focus,
+.btn-crannerEliminar.focus {
+  background-image: linear-gradient(to bottom, #FF0000 0px, #FF0000 100%);
+  border: 3px solid #FF0000;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.btn-crannerEliminar:hover {
+  background-image: linear-gradient(to bottom, #FF0000 0px, #FF0000 100%);
+  border: 3px solid #FF0000;
+  color: #FFFFFF;;
+  opacity: 0.5;
+
+}
+
+.btn-crannerEliminar:active,
+.btn-crannerEliminar.active,
+.open > .dropdown-toggle.btn-crannerEliminar {
+  background-image: linear-gradient(to bottom, #FF0000 0px, #FF0000 100%);
+  border: 3px solid #FF0000;
+  color: #FFFFFF;
+  opacity: 0.5;
+
+}
+
+.btn-crannerEliminar:active:hover,
+.btn-crannerEliminar.active:hover,
+.open > .dropdown-toggle.btn-crannerEliminar:hover,
+.btn-crannerEliminar:active:focus,
+.btn-crannerEliminar.active:focus,
+.open > .dropdown-toggle.btn-crannerEliminar:focus,
+.btn-crannerEliminar:active.focus,
+.btn-crannerEliminar.active.focus,
+.open > .dropdown-toggle.btn-crannerEliminar.focus {
+  background-image: linear-gradient(to bottom, #FF0000 0px, #FF0000 100%);
+  border: 3px solid #FF0000;
+  color: #FFFFFF;
+  opacity: 0.5;
+
+}
+
+.btn-crannerEliminar:active,
+.btn-crannerEliminar.active,
+.open > .dropdown-toggle.btn-crannerEliminar {
+  background-image: none;
+}
+
+.btn-crannerEliminar.disabled:hover,
+.btn-crannerEliminar[disabled]:hover,
+fieldset[disabled] .btn-crannerEliminar:hover,
+.btn-crannerEliminar.disabled:focus,
+.btn-crannerEliminar[disabled]:focus,
+fieldset[disabled] .btn-crannerEliminar:focus,
+.btn-crannerEliminar.disabled.focus,
+.btn-crannerEliminar[disabled].focus,
+fieldset[disabled] .btn-crannerEliminar.focus {
+  background-image: linear-gradient(to bottom, #FF0000 0px, #FF0000 100%);
+  border: 3px solid #FF0000;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.btn-crannerEliminar .badge {
+  background-image: linear-gradient(to bottom, #FF0000 0px, #FF0000 100%);
+  border: 3px solid #FF0000;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.btn-crannerEliminar:active{
+  background-image: linear-gradient(to bottom, #FF0000 0px, #FF0000 100%);
+  border: 3px solid #FF0000;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+
+.btn-crannerCancelar{
+  background-image: linear-gradient(to bottom, #FF0000 0px, #FF0000 100%);
+  border: 3px solid #FF0000;
+  color: #FFFFFF;
+  font-weight: bold;
+  border-radius: 0px !important;
+  text-transform: uppercase;
+}
+
+.btn-crannerCancelar:hover{
+  border: 3px solid #FF0000;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.btn-crannerCancelar:focus,
+.btn-crannerCancelar.focus {
+  border: 3px solid #FF0000;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.btn-crannerCancelar:hover {
+  border: 3px solid #FF0000;
+  color: #FFFFFF;;
+  opacity: 0.5;
+
+}
+
+.btn-crannerCancelar:active,
+.btn-crannerCancelar.active,
+.open > .dropdown-toggle.btn-crannerCancelar {
+  border: 3px solid #FF0000;
+  color: #FFFFFF;
+  opacity: 0.5;
+
+}
+
+.btn-crannerCancelar:active:hover,
+.btn-crannerCancelar.active:hover,
+.open > .dropdown-toggle.btn-crannerCancelar:hover,
+.btn-crannerCancelar:active:focus,
+.btn-crannerCancelar.active:focus,
+.open > .dropdown-toggle.btn-crannerCancelar:focus,
+.btn-crannerCancelar:active.focus,
+.btn-crannerCancelar.active.focus,
+.open > .dropdown-toggle.btn-crannerCancelar.focus {
+  border: 3px solid #FF0000;
+  color: #FFFFFF;
+  opacity: 0.5;
+
+}
+
+.btn-crannerCancelar:active,
+.btn-crannerCancelar.active,
+.open > .dropdown-toggle.btn-crannerCancelar {
+  background-image: none;
+}
+
+.btn-crannerCancelar.disabled:hover,
+.btn-crannerCancelar[disabled]:hover,
+fieldset[disabled] .btn-crannerCancelar:hover,
+.btn-crannerCancelar.disabled:focus,
+.btn-crannerCancelar[disabled]:focus,
+fieldset[disabled] .btn-crannerCancelar:focus,
+.btn-crannerCancelar.disabled.focus,
+.btn-crannerCancelar[disabled].focus,
+fieldset[disabled] .btn-crannerCancelar.focus {
+  border: 3px solid #FF0000;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.btn-crannerCancelar .badge {
+  border: 3px solid #FF0000;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.btn-crannerCancelar:active{
+  border: 3px solid #FF0000;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.btn-crannerGuardar{
+  background-image: linear-gradient(to bottom, #00C81E 0px, #00C81E 100%);
+  border: 3px solid #00C81E;
+  color: #FFFFFF;
+  font-weight: bold;
+  border-radius: 0px !important;
+  text-transform: uppercase;
+}
+
+.btn-crannerGuardar:hover{
+  background-image: linear-gradient(to bottom, #00C81E 0px, #00C81E 100%);
+  border: 3px solid #00C81E;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.btn-crannerGuardar:focus,
+.btn-crannerGuardar.focus {
+  background-image: linear-gradient(to bottom, #00C81E 0px, #00C81E 100%);
+  border: 3px solid #00C81E;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.btn-crannerGuardar:hover {
+  background-image: linear-gradient(to bottom, #00C81E 0px, #00C81E 100%);
+  border: 3px solid #00C81E;
+  color: #FFFFFF;;
+  opacity: 0.5;
+
+}
+
+.btn-crannerGuardar:active,
+.btn-crannerGuardar.active,
+.open > .dropdown-toggle.btn-crannerGuardar {
+  background-image: linear-gradient(to bottom, #00C81E 0px, #00C81E 100%);
+  border: 3px solid #00C81E;
+  color: #FFFFFF;
+  opacity: 0.5;
+
+}
+
+.btn-crannerGuardar:active:hover,
+.btn-crannerGuardar.active:hover,
+.open > .dropdown-toggle.btn-crannerGuardar:hover,
+.btn-crannerGuardar:active:focus,
+.btn-crannerGuardar.active:focus,
+.open > .dropdown-toggle.btn-crannerGuardar:focus,
+.btn-crannerGuardar:active.focus,
+.btn-crannerGuardar.active.focus,
+.open > .dropdown-toggle.btn-crannerGuardar.focus {
+  background-image: linear-gradient(to bottom, #00C81E 0px, #00C81E 100%);
+  border: 3px solid #00C81E;
+  color: #FFFFFF;
+  opacity: 0.5;
+
+}
+
+.btn-crannerGuardar:active,
+.btn-crannerGuardar.active,
+.open > .dropdown-toggle.btn-crannerGuardar {
+  background-image: none;
+}
+
+.btn-crannerGuardar.disabled:hover,
+.btn-crannerGuardar[disabled]:hover,
+fieldset[disabled] .btn-crannerGuardar:hover,
+.btn-crannerGuardar.disabled:focus,
+.btn-crannerGuardar[disabled]:focus,
+fieldset[disabled] .btn-crannerGuardar:focus,
+.btn-crannerGuardar.disabled.focus,
+.btn-crannerGuardar[disabled].focus,
+fieldset[disabled] .btn-crannerGuardar.focus {
+  background-image: linear-gradient(to bottom, #00C81E 0px, #00C81E 100%);
+  border: 3px solid #00C81E;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.btn-crannerGuardar .badge {
+  background-image: linear-gradient(to bottom, #00C81E 0px, #00C81E 100%);
+  border: 3px solid #00C81E;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.btn-crannerGuardar:active{
+  background-image: linear-gradient(to bottom, #00C81E 0px, #00C81E 100%);
+  border: 3px solid #00C81E;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.btn-crannerEditar{
+  background-image: linear-gradient(to bottom, #FF6400 0px, #FF6400 100%);
+  border: 3px solid #FF6400;
+  color: #FFFFFF;
+  font-weight: bold;
+  border-radius: 0px !important;
+  text-transform: uppercase;
+}
+
+.btn-crannerEditar:focus,
+.btn-crannerEditar.focus {
+  background-image: linear-gradient(to bottom, #FF6400 0px, #FF6400 100%);
+  border: 3px solid #FF6400;
+  color: #FFFFFF;
+  font-weight: bold;
+  opacity: 0.5;
+}
+.btn-crannerEditar:hover {
+  background-image: linear-gradient(to bottom, #FF6400 0px, #FF6400 100%);
+  border: 3px solid #FF6400;
+  color: #FFFFFF;
+  font-weight: bold;
+  opacity: 0.5;
+}
+.btn-crannerEditar:active,
+.btn-crannerEditar.active,
+.open > .dropdown-toggle.btn-crannerEditar {
+  background-image: linear-gradient(to bottom, #FF6400 0px, #FF6400 100%);
+  border: 3px solid #FF6400;
+  color: #FFFFFF;
+  font-weight: bold;
+  opacity: 0.5;
+}
+.btn-crannerEditar:active:hover,
+.btn-crannerEditar.active:hover,
+.open > .dropdown-toggle.btn-crannerEditar:hover,
+.btn-crannerEditar:active:focus,
+.btn-crannerEditar.active:focus,
+.open > .dropdown-toggle.btn-crannerEditar:focus,
+.btn-crannerEditar:active.focus,
+.btn-crannerEditar.active.focus,
+.open > .dropdown-toggle.btn-crannerEditar.focus {
+  background-image: linear-gradient(to bottom, #FF6400 0px, #FF6400 100%);
+  border: 3px solid #FF6400;
+  color: #FFFFFF;
+  font-weight: bold;
+  opacity: 0.5;
+}
+.btn-crannerEditar:active,
+.btn-crannerEditar.active,
+.open > .dropdown-toggle.btn-crannerEditar {
+  background-image: none;
+}
+.btn-crannerEditar.disabled:hover,
+.btn-crannerEditar[disabled]:hover,
+fieldset[disabled] .btn-crannerEditar:hover,
+.btn-crannerEditar.disabled:focus,
+.btn-crannerEditar[disabled]:focus,
+fieldset[disabled] .btn-crannerEditar:focus,
+.btn-crannerEditar.disabled.focus,
+.btn-crannerEditar[disabled].focus,
+fieldset[disabled] .btn-crannerEditar.focus {
+  background-image: linear-gradient(to bottom, #FF6400 0px, #FF6400 100%);
+  border: 3px solid #FF6400;
+  color: #FFFFFF;
+  font-weight: bold;
+  opacity: 0.5;
+}
+.btn-crannerEditar .badge {
+  background-image: linear-gradient(to bottom, #FF6400 0px, #FF6400 100%);
+  border: 3px solid #FF6400;
+  color: #FFFFFF;
+  font-weight: bold;
+  opacity: 0.5;
+}
+
+.btn-crannerEditar:active{
+  border: 3px solid #FF6400;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.btn-crannerAddGrupoImagen{
+  background-image: linear-gradient(to bottom, #FFD250 0px, #FFD250 100%);
+  color: #000000;
+  font-weight: bold;
+  border-radius: 0px !important;
+}
+
+.btn-crannerAddGrupoImagen:focus,
+.btn-crannerAddGrupoImagen.focus {
+  background-image: linear-gradient(to bottom, #FFD250 0px, #FF6400 100%);
+  color: #000000;
+  font-weight: bold;
+  opacity: 0.5;
+}
+.btn-crannerAddGrupoImagen:hover {
+  background-image: linear-gradient(to bottom, #FFD250 0px, #FF6400 100%);
+  color: #000000;
+  font-weight: bold;
+  opacity: 0.5;
+}
+.btn-crannerAddGrupoImagen:active,
+.btn-crannerAddGrupoImagen.active,
+.open > .dropdown-toggle.btn-crannerAddGrupoImagen {
+  background-image: linear-gradient(to bottom, #FFD250 0px, #FF6400 100%);
+  color: #000000;
+  font-weight: bold;
+  opacity: 0.5;
+}
+.btn-crannerAddGrupoImagen:active:hover,
+.btn-crannerAddGrupoImagen.active:hover,
+.open > .dropdown-toggle.btn-crannerAddGrupoImagen:hover,
+.btn-crannerAddGrupoImagen:active:focus,
+.btn-crannerAddGrupoImagen.active:focus,
+.open > .dropdown-toggle.btn-crannerAddGrupoImagen:focus,
+.btn-crannerAddGrupoImagen:active.focus,
+.btn-crannerAddGrupoImagen.active.focus,
+.open > .dropdown-toggle.btn-crannerAddGrupoImagen.focus {
+  background-image: linear-gradient(to bottom, #FFD250 0px, #FF6400 100%);
+  color: #000000;
+  font-weight: bold;
+  opacity: 0.5;
+}
+.btn-crannerAddGrupoImagen:active,
+.btn-crannerAddGrupoImagen.active,
+.open > .dropdown-toggle.btn-crannerAddGrupoImagen {
+  background-image: none;
+}
+.btn-crannerAddGrupoImagen.disabled:hover,
+.btn-crannerAddGrupoImagen[disabled]:hover,
+fieldset[disabled] .btn-crannerAddGrupoImagen:hover,
+.btn-crannerAddGrupoImagen.disabled:focus,
+.btn-crannerAddGrupoImagen[disabled]:focus,
+fieldset[disabled] .btn-crannerAddGrupoImagen:focus,
+.btn-crannerAddGrupoImagen.disabled.focus,
+.btn-crannerAddGrupoImagen[disabled].focus,
+fieldset[disabled] .btn-crannerAddGrupoImagen.focus {
+  background-image: linear-gradient(to bottom, #FFD250 0px, #FF6400 100%);
+  color: #000000;
+  font-weight: bold;
+  opacity: 0.5;
+}
+.btn-crannerAddGrupoImagen .badge {
+  background-image: linear-gradient(to bottom, #FFD250 0px, #FF6400 100%);
+  color: #000000;
+  font-weight: bold;
+  opacity: 0.5;
+}
+
+.btn-crannerAddGrupoImagen:active{
+  background-image: linear-gradient(to bottom, #FFD250 0px, #FF6400 100%);
+  color: #000000;
+  opacity: 0.5;
+}
+
+.panel-heading-grupos-imagenes{
+  background-image: none !important;
+  background-color: #000000 !important;
+  border-radius: 0px !important;
+}
+
+.panel-primary-grupos-imagenes{
+  border-color: #000000 !important;
+}
+
+.panel-cranner{
+  border-radius: 0px !important;
+}
+
+.jumbotron-angosto{
+  margin-top:0px !important;
+  /*margin-bottom:0px !important;*/
+  padding-top:5px !important;
+  padding-bottom:15px !important;
+  float:left;
+  width:100%;
+  border-radius: 0 !important;
+}
+
+.navbar{
+  border-radius: 0px !important;
+}
+
+.form-control{
+  border-radius: 0px !important;
+}
+
+.no-background{
+  background-color: #FFFFFF;
+}
